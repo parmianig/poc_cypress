@@ -1,0 +1,8 @@
+{
+    "javascript.suggestionActions.enabled": false,
+    "cucumberautocomplete.steps": [
+        "cypress/support/step_definitions/*.js",
+    ],
+    "cucumberautocomplete.syncfeatures": "test/support/*feature",
+    "cucumberautocomplete.strictGherkinCompletion": true    
+}

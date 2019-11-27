@@ -4,6 +4,7 @@
     },
     "devDependencies": {
         "cypress": "^3.6.1",
+        "cypress-cucumber-preprocessor": "^1.16.2",
         "eslint": "^6.7.1"
     }
 }
