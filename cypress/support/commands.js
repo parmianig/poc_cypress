@@ -25,8 +25,8 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add("login", (email, password) => { 
+Cypress.Commands.add("login", (email, password='') => { 
     cy.get('#WC_AccountDisplay_FormInput_logonId_In_Logon_1_copy4').type(email)
-    cy.get('#WC_AccountDisplay_FormInput_logonPassword_In_Logon_1_copy4').type(password)
+    cy.get('#WC_AccountDisplay_FormInput_logonPassword_In_Logon_1_copy4').invoke('val', password)
     cy.hash('eq', '#/')
  })
