@@ -11,8 +11,17 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const cucumber = require('cypress-cucumber-preprocessor').default
+const preprocess = require('./preprocess');
 
 module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
+  on("file:preprocessor", preprocess);
+
+  const targetEnv = config.env.TARGET_ENV || 'qa';
+
+  const environmentConfig = require(`./config/${targetEnv}`);
+
+  return {
+  ...config,
+  ...environmentConfig,
+  };
 }
