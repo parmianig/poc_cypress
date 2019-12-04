@@ -5,7 +5,7 @@ const err_requiresValidUsernameAndPassword = 'There is a problem with the email 
 const err_requiresEmail = 'Please provide a valid email address.'
 const queryString = '?catalogId=20602&langId=-1&storeId=10152'
 
-describe('My First Test', function() {
+describe('My First Abstract Test', function() {
     it('greets with signin', () => {
         cy.visit('https://stage.sunglasshut.com/UserSignInView' + queryString)
         cy.get('.first').contains('Sign In')

@@ -3,6 +3,6 @@
     "cucumberautocomplete.steps": [
         "cypress/support/step_definitions/*.js",
     ],
-    "cucumberautocomplete.syncfeatures": "test/support/*feature",
+    "cucumberautocomplete.syncfeatures": "cypress/integration/*.feature",
     "cucumberautocomplete.strictGherkinCompletion": true    
 }

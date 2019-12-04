@@ -1,10 +1,14 @@
 {
     "scripts": {
-        "cypress:open": "cypress open"
+        "cypress:open": "cypress open",
+        "cypress:run:stage": "cypress run -- --record --spec \"cypress/integration/test_sample_spec.js\"",
+        "cypress:run:headed": "cypress run --headed"
     },
     "devDependencies": {
         "cypress": "^3.6.1",
         "cypress-cucumber-preprocessor": "^1.16.2",
-        "eslint": "^6.7.1"
+        "eslint": "^6.7.1",
+        "eslint-plugin-chai-friendly": "^0.5.0",
+        "eslint-plugin-cypress": "^2.7.0"
     }
 }
